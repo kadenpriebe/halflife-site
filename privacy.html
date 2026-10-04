@@ -1,60 +1,28 @@
 <!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>half-lyfe Privacy Policy</title><link rel="stylesheet" href="style.css"></head><body><main><nav><a href="index.html">half-lyfe</a><a href="terms.html">Terms of Use</a><a href="privacy.html">Privacy Policy</a><a href="support.html">Support</a></nav>
 <h1>Privacy Policy</h1>
-<p class="muted">Effective October 2, 2026</p>
-<p>half-lyfe is built so that your data stays with you. We run no server of our own, use no analytics, no advertising, and no third‑party software development kits. Everything below lives on your iPhone, in your own iCloud account, or with Apple. This policy explains what the app stores, what it reads from Apple Health, what it shares when you join a group, and what Apple handles on our behalf.</p>
-
-<h2>What the app stores on your device</h2>
-<ul>
-<li><strong>Drink log.</strong> Each drink you log (name, caffeine amount, how much of it you drank, time opened and finished), your favorite drinks, your “usual” drink, and the routine the app learns from your history (for example that you tend to have a drink around 2 pm).</li>
-<li><strong>Check‑ins, reaction tests and calibration.</strong> Your “how do you feel” answers, reaction‑test results, and the caffeine half‑life and limits the app learns from them.</li>
-<li><strong>Profile.</strong> The details you enter to seed the model: weight, an optional age, sensitivity, bedtime and wake time, goal, and your answers about smoking, oral contraceptives, pregnancy, and medications that slow caffeine clearance. Every sensitive question offers “Prefer not to say”.</li>
-<li><strong>Caffeine habit.</strong> Your optional answers about how much caffeine you have on a usual day, how many days a week and for how long. They seed your tolerance estimate until your own logs take over.</li>
-<li><strong>Where you heard about us.</strong> Your answer to this onboarding question. It stays on your iPhone; we never receive it.</li>
-<li><strong>Sleep and overnight readings from Apple Health.</strong> If you connect Apple Health, the last 120 nights of sleep and (only if you turn on overnight vitals) the readings listed under Apple Health below.</li>
-</ul>
-<p>This data lives in an App Group container shared only between the half-lyfe app and its own widgets, Control Center control, Live Activity and Apple Watch app on your devices. It is included in your normal iCloud or computer backup if you have backups enabled. You can export it under Profile → Support &amp; Legal → Export data, and delete all of it at any time under Profile → Account Actions → Delete account.</p>
-
-<h2>iCloud sync</h2>
-<p>To keep your own iPhone, Apple Watch and Mac in step and to restore after a reinstall, the app stores your drink log and a small settings snapshot in the <strong>private</strong> database of your iCloud account using Apple’s CloudKit. Apple hosts it; we operate no server and cannot read it. The snapshot contains your drink log, favorites, usual drink, bedtime and wake time, goal, age, self‑reported sensitivity, routine, and the learned half‑life and limits. It deliberately excludes anything read from Apple Health, your reaction‑test baselines, your body weight, your answers about pregnancy, contraceptives, medications, genotype and smoking, and your caffeine‑habit answers — those stay on the iPhone that recorded them and are re‑learned or re‑entered after a restore. You can turn iCloud off for half-lyfe in iPhone Settings, and “Delete account” removes everything the app put in iCloud.</p>
-
-<h2>Groups</h2>
-<p>Groups are optional. If you create or join one, the app shares with the members of that group, through a shared iCloud zone: a display name you choose, an anonymous member identifier, today’s caffeine total, your current estimated level, and the name and time of your last drink. The level shown to friends is computed with the population‑average half‑life, not your personal one, so nothing learned from Apple Health reaches anyone else. Group members see this until you leave the group; owners can remove members, and “Delete account” removes your membership and every group you own.</p>
-
-<h2>Apple Health</h2>
-<p>Apple Health is optional. The app asks for it only from the Insights cards that use it, never during setup. If you allow it, half-lyfe:</p>
-<ul>
-<li><strong>Writes</strong> each drink you log to Health as dietary caffeine. Deleting a drink in the app deletes that Health entry too.</li>
-<li><strong>Reads</strong> sleep analysis to learn how long caffeine keeps you awake and to refine your bedtime cutoff.</li>
-<li><strong>Reads, only if you also turn on overnight vitals,</strong> heart rate, heart rate variability, respiratory rate, blood oxygen, wrist temperature, environmental sound levels, exercise minutes, active energy and workouts. These are used on your phone to compare caffeinated and clean nights and to leave out nights skewed by illness, noise or a late workout. Each reading’s purpose is listed in the app before you turn it on.</li>
-</ul>
-<p>Health data is never stored in iCloud, never transmitted off the device, never used for advertising or marketing, and never shared with anyone. You can revoke access at any time in the Health app under Sharing → Apps → half-lyfe, or turn overnight vitals off under Profile → Apple Health.</p>
-
+<p class="muted">Effective October 4, 2026. Current release: version 1.0.1, build 8 and later non-AI builds.</p>
+<p>The current half-lyfe release plans caffeine on your device. AI planning is unavailable, is not an active subscription feature, and sends nothing to OpenAI or Cloudflare. iCloud tracking sync, friend Groups and the acquisition survey are unavailable in this release. There are no advertising, analytics or tracking SDKs.</p>
+<h2>Data stored on your device</h2>
+<ul><li>Drink names, caffeine amounts, portions, opened and finished times, favorites and your usual drink.</li><li>Age band, sleep schedule, caffeine habits, optional profile details and health-related answers such as sensitivity, smoking, pregnancy and medication. These seed local estimates, not diagnosis.</li><li>Self-reported drink effects, check-ins, optional reaction tests, model parameters, tracking streaks and break preferences.</li><li>Selected calendar identifiers, manual time windows, intended drinks, plans and reminder preferences. Calendar event details are read locally from calendars you authorize.</li><li>Up to 120 nights of imported Apple Health sleep and, when separately enabled, overnight readings.</li></ul>
+<p>The app and its extensions share a protected App Group container. Sensitive tracking files and preferences are marked as excluded from automatic backups; operating-system exclusions are advisory, so we cannot guarantee every backup tool honors them. There is no app-managed iCloud tracking upload in this release. Export CSV or JSON under Profile &gt; Export data. An export can contain sensitive information; you control its destination and deletion.</p>
+<h2>Calendar</h2>
+<p>Calendar is optional. The app reads only your selected calendars through Apple's EventKit and never changes events. Google calendars appear only when synced into the iPhone's Apple Calendar database. Manual planning works without access. Calendar data is not sent to an AI provider or developer server. Disconnect or change calendars under Profile &gt; Plan your day.</p>
+<h2>Apple Health and Apple Watch</h2>
+<p>Apple Health is optional and requested through a feature connection or settings, not required for onboarding. With permission the app writes logged drinks as dietary caffeine and reads sleep for local estimates and comparisons. Overnight vitals require a separate opt-in: heart rate, heart-rate variability, respiratory rate, blood oxygen, wrist temperature, environmental sound, exercise, active energy and workouts help compare nights and identify confounding conditions. Each purpose is listed before authorization.</p>
+<p>Raw Health records and medical answers stay on your iPhone. A directly paired Apple Watch can receive drink logs, schedules and tracking estimates through Apple's WatchConnectivity, including model parameters derived on the iPhone. Those copies stay locally on the Watch, not in CloudKit or a developer server. Revoke Health access in the Health app; disable overnight vitals in Profile &gt; Manage Apple Health. Comparisons and model learning do not measure caffeine clearance or prove that caffeine caused a sleep change.</p>
 <h2>Notifications</h2>
-<p>Reminders (peak focus window, last call, bedtime load, daily limit, worn off, routine reminders, daily insight, weekly recap, morning brief and tomorrow’s plan) are scheduled locally on your device and each has its own switch. The only push notifications are silent iCloud sync signals from Apple that carry no content.</p>
-
-<h2>Subscriptions and payment</h2>
-<p>half-lyfe Pro is sold as an auto‑renewing subscription through Apple’s App Store. Apple processes the payment and holds your billing details; we never see your card number or Apple Account details. The app verifies your subscription status on device using Apple’s StoreKit framework. The only subscription information stored by the app is whether Pro is currently active.</p>
-
-<h2>Feedback and reports</h2>
-<p>“Send feedback” and “Report a member” open a mail you review and send yourself. The mail is pre‑filled with your reason, your note, the app version and iOS version, and for a report the group’s name. Nothing is sent unless you tap Send.</p>
-
-<h2>What we do not do</h2>
-<ul>
-<li>We do not collect analytics, crash reports, or usage statistics.</li>
-<li>We do not use advertising or tracking identifiers, and we do not track you across apps or websites.</li>
-<li>We do not sell, share, or transfer your data to anyone.</li>
-<li>We do not operate a server that receives data from the app.</li>
-</ul>
-
-<h2>Your rights</h2>
-<p>Because your data is on your device and in your own iCloud account, you can read, export and delete it yourself at any time from the app. If you have a question or a request under a privacy law that applies to you (for example the GDPR or the CCPA), email us and we will help.</p>
-
-<h2>Children</h2>
-<p>half-lyfe is not directed at children under 13. If you enter an age under 18 in your profile, the app applies a lower daily limit.</p>
-
-<h2>Changes</h2>
-<p>If this policy changes, the new version will be posted at this address with an updated effective date.</p>
-
-<h2>Contact</h2>
-<p>Email <a href="mailto:halflyfesupport@gmail.com">halflyfesupport@gmail.com</a>.</p>
+<p>Reminders are scheduled locally after permission. Settings are optional and editable in Profile &gt; Reminders. Proposals never log a drink automatically.</p>
+<h2>Subscriptions</h2>
+<p>Apple processes subscriptions through StoreKit. We do not receive payment cards or Apple Account credentials. The app locally checks verified purchase transactions, renewal and trial eligibility, and caches Pro access. Purchase and Restore do not contact our AI backend. Apple handles its own processing under its privacy policy.</p>
+<h2>Support</h2>
+<p>When you voluntarily send a support email, we receive your email address, message and attachments you include; an in-app draft may include app and operating-system versions. Nothing is sent until you send it. We use this information to respond and retain it only as needed for support or legal obligations. Do not send medical records. Request deletion at <a href="mailto:halflyfesupport@gmail.com">halflyfesupport@gmail.com</a>.</p>
+<h2>Retention and deletion</h2>
+<p>Tracking data stays on your device until deletion or app removal; imported sleep and vitals are limited to the latest 120 nights. Profile &gt; Delete account clears this iPhone's local records and preferences and is also available from the paywall. If earlier versions stored data in iCloud, the app requests erasure and retries when opened online; keep it installed until erasure finishes. This deletion-only CloudKit access does not upload new tracking records. Remove the app from the Watch and other devices separately. Samples saved to Apple Health remain there; manage them in Health. Exports and backups are separate copies. Deleting data does not cancel an Apple subscription; cancel in Settings &gt; Apple Account &gt; Subscriptions.</p>
+<h2>Earlier versions and development testing</h2>
+<p>Earlier builds offered private CloudKit sync and optional Groups. They could store manually logged drinks, favorites, schedules and settings in the user's iCloud, and share a chosen name, member identifier and caffeine totals with invited members. Earlier snapshots could contain model parameters. Current builds stop these uploads; stopping sync does not delete prior copies. Manage previous app data in iCloud storage settings or contact support. Development testing also used Cloudflare installation verification and optional referral/AI requests. This service is not used by the current release. Contact support to remove development records; anonymous aggregate referral totals cannot be tied back to a person.</p>
+<h2>Young users</h2>
+<p>The app is not directed at children under 13 and onboarding blocks that age band. Users aged 13-17 may track intake but receive no automated recommendation to consume caffeine. Use with a parent or guardian's permission and seek professional caffeine guidance. No exact birth date is required. The current release does not collect teen calendar or Health information on a developer server.</p>
+<h2>Your rights and changes</h2>
+<p>Review, export and delete local information in the app. Contact us about privacy rights, prior-version data or support records. Future AI or cloud features require updated disclosures and any necessary consent before activation; a coming-soon label is not consent. Changes are posted here with an effective date.</p>
+<h2>Contact</h2><p><a href="mailto:halflyfesupport@gmail.com">halflyfesupport@gmail.com</a></p>
 <footer class="muted">half-lyfe · <a href="mailto:halflyfesupport@gmail.com">halflyfesupport@gmail.com</a></footer></main></body></html>
